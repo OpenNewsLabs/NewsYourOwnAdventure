@@ -1,3 +1,6 @@
 
 .DS_Store
 /target/
+src/main/filters/api-keys.properties
+
+src/main/filters/api-keys.properties
