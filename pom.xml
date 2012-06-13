@@ -21,9 +21,9 @@
                     <include>**/*.xml</include>
                 </includes>
             </resource>
-            <resource>
+<!--            <resource>
                 <directory>src/main/ARK</directory>
-            </resource>
+            </resource>-->
         </resources>
         <plugins>
             <plugin>
