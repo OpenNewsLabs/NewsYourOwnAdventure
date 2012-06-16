@@ -1,2 +1,0 @@
-todo
-turn off propers in dist sim matching

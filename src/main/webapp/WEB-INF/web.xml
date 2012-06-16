@@ -5,6 +5,10 @@
     <listener>
         <description>ServletContextListener</description>
         <listener-class>com.namebound.parallax.Init</listener-class>
+        <init-param>
+            <param-name>contextPath</param-name>
+            <param-value>/Users/laurian/Projects/Parallax</param-value>
+        </init-param>
     </listener>
     <servlet>
         <servlet-name>Jersey Web Application</servlet-name>
@@ -17,6 +21,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Jersey Web Application</servlet-name>
-        <url-pattern>/webapi/*</url-pattern>
+        <url-pattern>/api/*</url-pattern>
     </servlet-mapping>
 </web-app>

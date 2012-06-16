@@ -23,13 +23,13 @@ public class ARKrefAdapter {
     private File arkref;
 
     public ARKrefAdapter() {
-        arkref = new File("/Users/laurian/Projects/Parallax/src/main/webapp/WEB-INF/ARK/arkref");
+        arkref = new File("/opt/ARK/arkref");
     }
 
-    @GET
+    @POST
     @Path("resolve")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String resolve(@QueryParam("text") String text) throws IOException, InterruptedException {
+    @Produces(MediaType.TEXT_XML)
+    public String resolve(@FormParam("text") String text) throws IOException, InterruptedException {
         
         String digest = save(text);
 
@@ -48,7 +48,8 @@ public class ARKrefAdapter {
         
         save(digest, log.toString(), "log");
 
-        return digest;
+        //return digest;
+        return tagged(digest);
     }
 
     @GET
