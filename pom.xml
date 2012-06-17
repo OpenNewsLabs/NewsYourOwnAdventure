@@ -88,16 +88,16 @@
             <artifactId>goose</artifactId>
             <version>2.1.19</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>pubnub</groupId>
             <artifactId>pubnub</artifactId>
             <version>3.0</version>
-        </dependency>
-        <dependency>
+        </dependency>-->
+<!--        <dependency>
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
             <version>2.1.5</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.jasypt</groupId>
             <artifactId>jasypt</artifactId>
