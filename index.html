@@ -37,18 +37,13 @@
 <body>
 	<!-- Get Friendly -->
 	
-	<script>
-var r_text = new Array ();
-r_text[0] = "All the leaves are brown";
-r_text[1] = "And the sky is grey";
-r_text[2] = "I've been for a walk";
-r_text[3] = "On a winter's day";
-r_text[4] = "I'd be safe and warm";
-r_text[5] = "If I was in L.A.";
-r_text[6] = "California dreaming, On such a winter's day";
-var i = Math.floor(7*Math.random())
-
-document.getElementById('start').write(r_text[i]);
+	<script type="text/javascript">
+$(document).ready(function() {
+    var quotes = new Array("foo", "bar", "baz", "chuck");
+    var randno = Math.floor(Math.random()*(quotes.length));
+    $('.quote').append(quotes[randno]);
+    console.log(randno);
+});
 	</script>
 	
 	<!-- Primary Page Layout
@@ -64,14 +59,14 @@ document.getElementById('start').write(r_text[i]);
 		</div>
 		</div>
 	</div>
-	
 	<div class="container">
 		<div class="sixteen columns">
 			<div class="intro">
 				<h1 class="intro">Newsquest</h1>
 				<p>A <a href="http://en.wikipedia.org/wiki/Gamebook">Choose Your Own Adventure</a> for the news. Enter a topic below to start your quest.</p>
 				<form action="#">
-					<input id="start" type="text" placeholder="Your adventure awaits..." />
+					<input type="text" placeholder="Your adventure about awaits..." />
+
 					<button class="shuffle" type="button"></button>
 				</form>
 			</div>

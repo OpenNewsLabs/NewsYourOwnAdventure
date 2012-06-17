@@ -18,12 +18,13 @@
 ================================================== */
 
 	/* Google Fonts */
-	@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic|Open+Sans);
+	@import url('http://fonts.googleapis.com/css?family=Gentium+Book+Basic|Open+Sans');
 	
 	/* Global */
 	
 	body {
 		background-color: #f4ede7;
+		color: #111;
 	}
 	
 	h1, h2 {
