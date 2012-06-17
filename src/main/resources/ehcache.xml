@@ -19,4 +19,10 @@
            overflowToDisk="true">
     </cache>
 
+    <cache name="QuestionGeneration"
+           maxElementsInMemory="1024"
+           eternal="false"
+           timeToLiveSeconds="43200"
+           overflowToDisk="true">
+    </cache>
 </ehcache>

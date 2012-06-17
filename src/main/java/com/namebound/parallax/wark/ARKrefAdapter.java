@@ -51,6 +51,13 @@ public class ARKrefAdapter {
         //return digest;
         return tagged(digest);
     }
+    
+    @POST
+    @Path("test")
+    @Produces(MediaType.TEXT_XML)
+    public String resolveParagraph(@FormParam("text") String text, @FormParam("p") String paragraph) throws IOException, InterruptedException {
+        
+    }
 
     @GET
     @Path("tagged")

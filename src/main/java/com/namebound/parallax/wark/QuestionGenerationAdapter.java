@@ -13,16 +13,24 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import net.sf.ehcache.CacheManager;
+import net.sf.ehcache.Ehcache;
+import net.sf.ehcache.Element;
 
 @Path("QuestionGeneration")
 public class QuestionGenerationAdapter {
     
     private File questionGeneration;
     ARKrefAdapter arkref;
+    
+    private final Ehcache cache;
    
     public QuestionGenerationAdapter() {
         questionGeneration = new File("/opt/ARK/QuestionGeneration");
         arkref = new ARKrefAdapter();
+        
+        CacheManager manager = CacheManager.newInstance();
+        cache = manager.getCache("QuestionGeneration");
     }
     
     @POST
@@ -30,8 +38,12 @@ public class QuestionGenerationAdapter {
     @Produces(MediaType.TEXT_PLAIN)
     public String process(@FormParam("text") String text) throws IOException, InterruptedException {
          
-        String digest = arkref.save(text);
+//        String digest = arkref.save(text);
         
+        Element element;
+        if ((element = cache.get(text)) != null) {
+            return element.getValue().toString();
+        }
         
         StringBuffer log = new StringBuffer();
         Process p = Runtime.getRuntime().exec("./run.sh --full-npc", null, questionGeneration);
@@ -51,6 +63,8 @@ public class QuestionGenerationAdapter {
             System.out.println(line);
         }
         bufferedReader.close();
+        
+        cache.put(new Element(text, log.toString()));
 
         return log.toString();
     }
