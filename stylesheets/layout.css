@@ -32,7 +32,7 @@
 		font-weight: 800;
 	}
 	
-	p, a {
+	p {
 		color: #222;
 		font-family: 'Gentium Book Basic', serif;
 		font-size: 18px;
@@ -63,6 +63,7 @@
 	}
 	
 	.intro a {
+		font-family: 'Gentium Book Basic', serif;
 		text-decoration: none;
 		color: #08C;
 	}
@@ -101,8 +102,11 @@
 	}
 	
 	.question a {
+		font-family: 'Gentium Book Basic', serif;
 		text-decoration: none;
 		color: #08C;
+		font-size: 18px;
+		line-height: 28px;
 	}
 	
 	.question a:hover {
