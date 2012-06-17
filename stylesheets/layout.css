@@ -17,6 +17,114 @@
 /* #Site Styles
 ================================================== */
 
+	/* Google Fonts */
+	@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic|Open+Sans);
+	
+	/* Global */
+	
+	body {
+		background-color: #f4ede7;
+	}
+	
+	h1, h2 {
+		color: #222;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 800;
+	}
+	
+	p, a {
+		color: #222;
+		font-family: 'Gentium Book Basic', serif;
+		font-size: 18px;
+	}
+	
+	a:hover {
+		color: #006698;
+	}
+	
+	.intro {
+		margin-top: 30%;
+		margin-bottom: 60px;
+		text-align: center;
+	}
+
+	/* Introduction */
+
+	.intro h1 {
+		font-size: 80px;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+	
+	.intro p {
+		color: #222;
+		font-family: 'Gentium Book Basic', serif;
+		font-size: 1em;
+	}
+	
+	.intro a {
+		text-decoration: none;
+		color: #08C;
+	}
+	
+	.intro a:hover {
+		color: #006698;
+	}
+	
+	.intro input {
+		display: inline-block;
+		margin: 0 auto;
+		width: 50%;
+		height: 30px;
+		font-family: 'Gentium Book Basic', serif;
+		font-size: 20px;
+		padding: 10px 10px 10px 10px;
+	}
+	
+	form a {
+		background-image: url("images/shuffle.png");
+	}
+	
+	/* Chapter */
+	
+	.chapter {
+		
+	}
+	
+	.chapter p {
+		line-height: 28px;
+		text-indent: 1em;
+	}
+	
+	.question {
+		margin-top: 12px;
+	}
+	
+	.question a {
+		text-decoration: none;
+		color: #08C;
+	}
+	
+	.question a:hover {
+		color: #006698;
+	}
+	
+	.options a {
+		color: #9e9e9e;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		text-decoration: none;
+		font-size: 13px;
+	}
+
+	.right {
+		float: right;
+	}
+	
+	.left {
+		float: left;
+	}
+	
 /* #Page Styles
 ================================================== */
 
