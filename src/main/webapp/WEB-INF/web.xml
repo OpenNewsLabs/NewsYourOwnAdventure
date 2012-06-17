@@ -18,17 +18,45 @@ see implementation details http://jersey.java.net/nonav/documentation/latest/jax
             <param-value>*</param-value>
         </init-param>
     </filter>
+    <filter>
+        <filter-name>CachingFilter</filter-name>
+        <filter-class>net.sf.ehcache.constructs.web.filter.SimpleCachingHeadersPageCachingFilter</filter-class>
+        <init-param>
+            <param-name>varyHeader</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>suppressStackTraces</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cacheName</param-name>
+            <param-value>Static</param-value>
+        </init-param>
+    </filter>
     <filter-mapping>
         <filter-name>cross-origin</filter-name>
-        <filter-pattern>/*</filter-pattern>
+        <filter-pattern>/api/*</filter-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CachingFilter</filter-name>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>*.json</url-pattern>
+        <url-pattern>*.png</url-pattern>
+        <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.gif</url-pattern>
+        <url-pattern>*.dict</url-pattern>
+        <url-pattern>*.html</url-pattern>
+        <url-pattern>*.txt</url-pattern>
+        <url-pattern>*.xml</url-pattern>
+        <url-pattern>*.svg</url-pattern>
+        <url-pattern>/api/arkref/*</url-pattern>
+        <url-pattern>/api/QuestionGeneration/*</url-pattern>
     </filter-mapping>
     <listener>
         <description>ServletContextListener</description>
         <listener-class>com.namebound.parallax.Init</listener-class>
-        <init-param>
-            <param-name>contextPath</param-name>
-            <param-value>/Users/laurian/Projects/Parallax</param-value>
-        </init-param>
     </listener>
     <servlet>
         <servlet-name>Jersey Web Application</servlet-name>
