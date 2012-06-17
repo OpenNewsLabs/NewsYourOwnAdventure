@@ -3,9 +3,12 @@ package com.namebound.parallax.wark;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
@@ -15,28 +18,33 @@ import javax.ws.rs.core.MediaType;
 public class QuestionGenerationAdapter {
     
     private File questionGeneration;
-    
+    ARKrefAdapter arkref;
    
     public QuestionGenerationAdapter() {
         questionGeneration = new File("/opt/ARK/QuestionGeneration");
+        arkref = new ARKrefAdapter();
     }
     
-    @GET
+    @POST
     @Path("questions")
     @Produces(MediaType.TEXT_PLAIN)
-    public String process(@QueryParam("text") String text) throws IOException, InterruptedException {
+    public String process(@FormParam("text") String text) throws IOException, InterruptedException {
+         
+        String digest = arkref.save(text);
         
-        System.out.println("processing...");
+        
         StringBuffer log = new StringBuffer();
         Process p = Runtime.getRuntime().exec("./run.sh --full-npc", null, questionGeneration);
-        p.waitFor();
+        //p.waitFor();
         
-        OutputStream pipe = p.getOutputStream();
-        pipe.write(text.getBytes());
-        pipe.flush();
-        pipe.close();
-
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(p.getInputStream()));
+        OutputStream stdin = p.getOutputStream();
+        InputStream stdout = p.getInputStream();
+        
+        stdin.write(text.getBytes());
+        stdin.flush();
+        stdin.close();
+        
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(stdout));
         String line;
         while ((line = bufferedReader.readLine()) != null) {
             log.append(line + '\n');

@@ -1,8 +1,25 @@
 <html>
 <body>
 
+    <h3>co-ref</h3>
     <form action="api/arkref/resolve" method="POST">
         <textarea name="text">
+Framing the Knight-Mozilla FellowshipThis was my first week at my brand new job as a Knight-Mozilla Fellow and I can tell you already that it is going to be an awesome time. I’ve worked in a newsroom once before, as an intern in the Pittsburgh Post-Gazette back during my undergraduate years, but I have a lot to learn and things feel very different here (bigger, more developers, fewer Steelers jerseys, etc.). I started the process by meeting with Mike Krolak. He is the man responsible for the technology related to product at The Boston Globe. This means web sites, but also things like printing presses, delivery trucks, and employee management systems. I’ll be starting my fellowship in one of his teams, which is the reason why I ended my first day with an ID badge, credentials, and access to most systems. Impressive, most impressive. When we talked over lunch he was clearly curious to learn more about my purpose and personal goals, at which point I said “you and me both, bub” and stared awkwardly past his head. What I actually did was share my high level understanding of the Fellowship: it’s an experiment, but the goals are to help technologists learn what it is like to work in the journalism industry and to get newsrooms more comfortable with external collaboration and open development. Really we’re figuring out the details as we go along. I got to learn a little more about Mike, what motivates him, and why he has spent more than a decade working for The Boston Globe. Here are three of my favorite points: For me these points frame the essence of the OpenNews initiative. Now that newspapers are innovating we want them to take a page from the mathematicians and make sure unsolved problems get solved in a way that everyone can learn from, expand upon, and contribute to (e.g. by publishing them to the world). As fellows we are also trying to understand what technology means for journalism and to share our lessons about where it can help and where it can hurt.
+        </textarea>
+        <input type="submit">
+    </form>
+
+    <h3>url</h3>
+    <form action="api/article/info" method="GET">
+        <input type="text" name="url" value="http://slifty.com/2012/06/framing-the-knight-mozilla-fellowship/">
+
+        <input type="submit">
+    </form>
+
+    <h3>Questions</h3>
+    <form action="api/QuestionGeneration/questions" method="POST">
+        <textarea name="text">
+Framing the Knight-Mozilla FellowshipThis was my first week at my brand new job as a Knight-Mozilla Fellow and I can tell you already that it is going to be an awesome time. I’ve worked in a newsroom once before, as an intern in the Pittsburgh Post-Gazette back during my undergraduate years, but I have a lot to learn and things feel very different here (bigger, more developers, fewer Steelers jerseys, etc.). I started the process by meeting with Mike Krolak. He is the man responsible for the technology related to product at The Boston Globe. This means web sites, but also things like printing presses, delivery trucks, and employee management systems. I’ll be starting my fellowship in one of his teams, which is the reason why I ended my first day with an ID badge, credentials, and access to most systems. Impressive, most impressive. When we talked over lunch he was clearly curious to learn more about my purpose and personal goals, at which point I said “you and me both, bub” and stared awkwardly past his head. What I actually did was share my high level understanding of the Fellowship: it’s an experiment, but the goals are to help technologists learn what it is like to work in the journalism industry and to get newsrooms more comfortable with external collaboration and open development. Really we’re figuring out the details as we go along. I got to learn a little more about Mike, what motivates him, and why he has spent more than a decade working for The Boston Globe. Here are three of my favorite points: For me these points frame the essence of the OpenNews initiative. Now that newspapers are innovating we want them to take a page from the mathematicians and make sure unsolved problems get solved in a way that everyone can learn from, expand upon, and contribute to (e.g. by publishing them to the world). As fellows we are also trying to understand what technology means for journalism and to share our lessons about where it can help and where it can hurt.
         </textarea>
         <input type="submit">
     </form>
