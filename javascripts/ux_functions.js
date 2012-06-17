@@ -12,20 +12,20 @@ function nextChapter() {
 	// Hide Share + Stats links
 		
 	// Add margin to current Chapter
-	$(this).parent('.chapters').css('margin-bottom','25%');
+	$(this).parent('.chapter').css('margin-bottom','25%');
 	
 	// Reveal next Chapter
-	$(this).parent('.chapters').next().css('visibility','visible');
+	$(this).parent('.chapter').next().css('visibility','visible');
 	
 	// Dim previous Chapter
-	$(this).parent('.chapters').animate({ 
+	$(this).parent('.chapter').animate({ 
 		opacity: 0.3,
 	}, 'fast');
 	
 	// Queue next next Chapter (visibility: hidden)
-	$('.container').append('<div class="chapters" style="visibility:hidden;"><div class="paragraphs">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div><div class="questions">QUESTIONS</div></div>');
+	grabChapter();
 	
-	$(this).parent('.chapters').next().children('.questions').click(nextChapter);
+	$(this).parent('.chapter').next().children('.question').click(nextChapter);
 	
 	// Scroll whole story up to center next Chapter
 	//$(this).parents('.container').animate({
@@ -35,8 +35,34 @@ function nextChapter() {
 	$.scrollTo($(this));
 }
 
+function grabChapter() {
+	$('.container').append('	<div class="chapter">
+			<div class="nine columns offset-by-three">
+				<p>United Nations monitors in Syria have suspended operations because of the increasing violence over the last 10 days by President Bashar al-Assad's forces and rebels seeking his overthrow, the head of the observer mission said on Saturday.</p>
+			
+				<div class="question">
+					<a href="#">Who is the head of the observer mission?</a>
+				</div><!-- question -->
+			
+				<div class="question">
+					<a href="#">Where did the violence begin?</a>
+				</div><!-- question -->			
+			
+				<div class="options">
+					<hr/>
+					<div class="right">
+						<a href="#">View Stats</a>
+					</div>
+					<div class="options left">
+						<a href="#">Share</a>
+					</div>
+				</div><!-- options -->
+			</div><!-- nine columns -->
+		</div><!-- chapter -->');	
+}
+
 $(document).ready(function() {	
-	$('.questions').first().click(nextChapter);
+	$('.question').click(nextChapter);
 	
 	// Toggle on/off the Mini-Masthead based on location of scrollbar (a.k.a. location of Main-Masthead)
 	$(window).scroll(function() {
