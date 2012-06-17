@@ -8,57 +8,34 @@
 function nextChapter() {
 	// Disable old Question buttons
 	$(this).unbind();
+	$(this).parents('.question').next().children().unbind();
 	
 	// Hide Share + Stats links
 		
 	// Add margin to current Chapter
-	$(this).parent('.chapter').css('margin-bottom','25%');
+	$(this).parents('.container').css('margin-bottom','15%');
 	
 	// Reveal next Chapter
-	$(this).parent('.chapter').next().css('visibility','visible');
+	$(this).parents('.container').next().css('visibility','visible');
 	
 	// Dim previous Chapter
-	$(this).parent('.chapter').animate({ 
-		opacity: 0.3,
+	$(this).parents('.container').animate({ 
+		opacity: 0.4,
 	}, 'fast');
 	
-	// Queue next next Chapter (visibility: hidden)
-	grabChapter();
-	
-	$(this).parent('.chapter').next().children('.question').click(nextChapter);
+	// Queue next next Chapter (visibility: hidden) and bind event handler
+	grabChapter(this);
 	
 	// Scroll whole story up to center next Chapter
-	//$(this).parents('.container').animate({
-	//	top: '-='+($(this).parent('.chapters').next().offset().top-$(this).parent('.chapters').offset().top)
-	//}, 'fast');
-	
-	$.scrollTo($(this));
+	$.scrollTo($(this).siblings('.options'));
 }
 
-function grabChapter() {
-	$('.container').append('	<div class="chapter">
-			<div class="nine columns offset-by-three">
-				<p>United Nations monitors in Syria have suspended operations because of the increasing violence over the last 10 days by President Bashar al-Assad's forces and rebels seeking his overthrow, the head of the observer mission said on Saturday.</p>
-			
-				<div class="question">
-					<a href="#">Who is the head of the observer mission?</a>
-				</div><!-- question -->
-			
-				<div class="question">
-					<a href="#">Where did the violence begin?</a>
-				</div><!-- question -->			
-			
-				<div class="options">
-					<hr/>
-					<div class="right">
-						<a href="#">View Stats</a>
-					</div>
-					<div class="options left">
-						<a href="#">Share</a>
-					</div>
-				</div><!-- options -->
-			</div><!-- nine columns -->
-		</div><!-- chapter -->');	
+// Grab the next chapter from the server
+function grabChapter(currentQuestion) {
+	$('body').append('<div class="container">NEW DATA</div>');	
+
+	// Bind event handler
+	$(currentQuestion).parents('.container').next().children('.question').click(nextChapter);
 }
 
 $(document).ready(function() {	
@@ -67,10 +44,10 @@ $(document).ready(function() {
 	// Toggle on/off the Mini-Masthead based on location of scrollbar (a.k.a. location of Main-Masthead)
 	$(window).scroll(function() {
 		var scrollTop = $(window).scrollTop();
-		if (scrollTop >= 0) {
-			$('#mini-masthead').fadeIn('fast');
+		if (scrollTop >= 100) {
+			$('#minimast-inner').fadeIn('fast');
 		} else {
-			$('#mini-masthead').fadeOut('fast');
+			$('#minimast-inner').fadeOut('fast');
 		}
 	});
 });	

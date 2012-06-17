@@ -52,7 +52,7 @@ $(document).ready(function() {
 	<div id="minimast">
 		<div class="container">
 		<div class="nine columns offset-by-three">
-			<div id="minimast-inner">
+			<div id="minimast-inner" style="display:none;">
 				<p class="left">Newsquest</p>
 				<p class="right"><a href="#">About</a>&nbsp;&nbsp;&nbsp;<a href="#">Print</a></p>
 			</div>
@@ -75,17 +75,48 @@ $(document).ready(function() {
 
 <!-- BLOCK BEGINS HERE -->
 	<div class="container">
+		<div class="nine columns offset-by-three">
+			<h2>Syria</h2>
+		</div>
 		<div class="chapter">
 			<div class="nine columns offset-by-three">
-				<h2>Syria</h2>
 				<p>United Nations monitors in Syria have suspended operations because of the increasing violence over the last 10 days by President Bashar al-Assad's forces and rebels seeking his overthrow, the head of the observer mission said on Saturday.</p>
 			
 				<div class="question">
-					<a href="#">Who is the head of the observer mission?</a>
+					<a>Who is the head of the observer mission?</a>
 				</div><!-- question -->
 			
 				<div class="question">
-					<a href="#">Where did the violence begin?</a>
+					<a>Where did the violence begin?</a>
+				</div><!-- question -->			
+			
+				<div class="options">
+				<hr>
+					<div class="right">
+						<a>View Stats</a>
+					</div>
+					<div class="options left">
+						<a>Share</a>
+					</div>
+			</div><!-- options -->
+			
+			</div><!-- ninecol -->
+		</div><!-- chapter -->
+	</div><!-- container -->
+<!-- BLOCK ENDS HERE -->
+
+<!-- BLOCK BEGINS HERE -->
+	<div class="container" style="visibility:hidden;">
+		<div class="chapter">
+			<div class="nine columns offset-by-three">
+				<p>United Nations monitors in Syria have suspended operations because of the increasing violence over the last 10 days by President Bashar al-Assad's forces and rebels seeking his overthrow, the head of the observer mission said on Saturday.</p>
+			
+				<div class="question">
+					<a>Who is the head of the observer mission?</a>
+				</div><!-- question -->
+			
+				<div class="question">
+					<a>Where did the violence begin?</a>
 				</div><!-- question -->			
 			
 				<div class="options">
@@ -104,48 +135,17 @@ $(document).ready(function() {
 <!-- BLOCK ENDS HERE -->
 
 <!-- BLOCK BEGINS HERE -->
-	<div class="container">
+	<div class="container" style="visibility:hidden;">
 		<div class="chapter">
 			<div class="nine columns offset-by-three">
-				<h2>Syria</h2>
 				<p>United Nations monitors in Syria have suspended operations because of the increasing violence over the last 10 days by President Bashar al-Assad's forces and rebels seeking his overthrow, the head of the observer mission said on Saturday.</p>
 			
 				<div class="question">
-					<a href="#">Who is the head of the observer mission?</a>
+					<a>Who is the head of the observer mission?</a>
 				</div><!-- question -->
 			
 				<div class="question">
-					<a href="#">Where did the violence begin?</a>
-				</div><!-- question -->			
-			
-				<div class="options">
-				<hr>
-					<div class="right">
-						<a href="#">View Stats</a>
-					</div>
-					<div class="options left">
-						<a href="#">Share</a>
-					</div>
-			</div><!-- options -->
-			
-			</div><!-- ninecol -->
-		</div><!-- chapter -->
-	</div><!-- container -->
-<!-- BLOCK ENDS HERE -->
-
-<!-- BLOCK BEGINS HERE -->
-	<div class="container">
-		<div class="chapter">
-			<div class="nine columns offset-by-three">
-				<h2>Syria</h2>
-				<p>United Nations monitors in Syria have suspended operations because of the increasing violence over the last 10 days by President Bashar al-Assad's forces and rebels seeking his overthrow, the head of the observer mission said on Saturday.</p>
-			
-				<div class="question">
-					<a href="#">Who is the head of the observer mission?</a>
-				</div><!-- question -->
-			
-				<div class="question">
-					<a href="#">Where did the violence begin?</a>
+					<a>Where did the violence begin?</a>
 				</div><!-- question -->			
 			
 				<div class="options">
@@ -166,7 +166,8 @@ $(document).ready(function() {
 	<!-- JS
 	================================================== -->
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-	<script src="javascripts/tabs.js"></script>
+	<script src="javascripts/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="javascripts/ux_functions.js"></script>
 
 <!-- End Document
 ================================================== -->
