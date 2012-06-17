@@ -1,0 +1,229 @@
+/*
+* Skeleton V1.1
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 8/17/2011
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+	/* Google Fonts */
+	@import url('http://fonts.googleapis.com/css?family=Gentium+Book+Basic|Open+Sans');
+	
+	/* Global */
+	
+	body {
+		background-color: #f4ede7;
+		color: #111;
+	}
+	
+	h1, h2 {
+		color: #222;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 800;
+	}
+	
+	p {
+		color: #222;
+		font-family: 'Gentium Book Basic', serif;
+		font-size: 18px;
+	}
+	
+	a:hover {
+		color: #006698;
+	}
+	
+	.intro {
+		margin-top: 30%;
+		margin-bottom: 60px;
+		text-align: center;
+	}
+	
+	/* Minimast */
+	
+	#minimast {
+		position: fixed;
+		background-color: #111;
+		width: 100%;
+		z-index: 3;
+		height: inherit;
+		-webkit-opacity: 0.9;
+	}
+	
+	#minimast-inner p {
+		margin: 10px 0px 10px 0px;
+	}
+	
+	#minimast p {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		text-decoration: none;
+		font-size: 13px;
+		color: #f4ede7;
+		text-transform: uppercase;
+	}
+	
+	#minimast a {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		text-decoration: none;
+		font-size: 13px;
+		color: #f4ede7;
+		text-transform: uppercase;
+	}
+	
+	#minimast a:hover {
+		color: #cdc1b6;		
+	}
+
+	/* Introduction */
+
+	.intro h1 {
+		font-size: 80px;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+	
+	.intro p {
+		color: #222;
+		font-family: 'Gentium Book Basic', serif;
+		font-size: 1em;
+	}
+	
+	.intro a {
+		font-family: 'Gentium Book Basic', serif;
+		text-decoration: none;
+		color: #08C;
+	}
+	
+	.intro a:hover {
+		color: #006698;
+	}
+	
+	.intro input {
+		display: inline-block;
+		margin: 0 auto;
+		width: 50%;
+		height: 30px;
+		font-family: 'Gentium Book Basic', serif;
+		font-size: 20px;
+		padding: 10px 10px 10px 10px;
+	}
+	
+	form a {
+		background-image: url("../images/shuffle.png");
+	}
+	
+	.intro .shuffle {
+		height: auto;
+		width: 35px;
+		background-image: url("../images/shuffle.png");
+		background-repeat: no-repeat;
+		background-position: 4px 5px;
+		border: none;
+		background-color: inherit;
+	}
+	
+	/* Chapter */
+	
+	.chapter {
+		
+	}
+	
+	.chapter p {
+		line-height: 28px;
+		text-indent: 1em;
+	}
+	
+	.question {
+		margin-top: 12px;
+	}
+	
+	.question a {
+		font-family: 'Gentium Book Basic', serif;
+		text-decoration: none;
+		color: #08C;
+		font-size: 18px;
+		line-height: 28px;
+		transition: color .25s ease-in-out;
+		-moz-transition: color .25s ease-in-out;
+		-webkit-transition: color .25s ease-in-out;
+	}
+	
+	.question a:hover {
+		color: #005580;
+	}
+	
+	.options {
+		margin-bottom: 20px;
+	}
+	
+	.options a {
+		color: #9e9e9e;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		text-decoration: none;
+		font-size: 13px;
+	}
+	
+	.options a:hover {
+		color: #777;
+	}
+
+	.right {
+		float: right;
+	}
+	
+	.left {
+		float: left;
+	}
+	
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
