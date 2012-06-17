@@ -10,7 +10,7 @@
         <finalName>NYOA</finalName>
         <filters>
             <filter>src/main/filters/filter.properties</filter>
-            <filter>src/main/filters/api-keys.properties</filter>
+<!--            <filter>src/main/filters/api-keys.properties</filter>-->
         </filters>
         <resources>
             <resource>
