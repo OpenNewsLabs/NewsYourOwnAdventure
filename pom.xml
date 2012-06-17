@@ -5,9 +5,9 @@
     <artifactId>Parallax</artifactId>
     <packaging>war</packaging>
     <version>0.1</version>
-    <name>Parallax</name>
+    <name>NYOA</name>
     <build>
-        <finalName>Parallax</finalName>
+        <finalName>NYOA</finalName>
         <filters>
             <filter>src/main/filters/filter.properties</filter>
             <filter>src/main/filters/api-keys.properties</filter>
