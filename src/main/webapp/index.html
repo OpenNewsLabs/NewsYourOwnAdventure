@@ -39,15 +39,11 @@
 	
 	<script type = "text/javascript">
 	$(function() {
-		$("#start").click(function() {
-			
-			window.nyoa_prefs = {base_article_url: $("#article_url").val()};
-			var c = "var nyoa_domain='';var s=document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='javascripts/adventure.min.js'";
-			var s = $("<script>");
-			s.html(c);
-			$("body").append(s);
-			
-		});
+		//window.nyoa_prefs = {base_article_url: $("#article_url").val()};
+		var c = "var nyoa_domain='';var s=document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='javascripts/adventure.min.js'";
+		var s = $("<script>");
+		s.html(c);
+		$("body").append(s);
 	});
 	</script>
 </head>
@@ -75,19 +71,21 @@ $(document).ready(function() {
 		</div>
 		</div>
 	</div>
+	
 	<div class="container">
 		<div class="sixteen columns">
 			<div class="intro">
 				<h1 class="intro">Newsquest</h1>
-				<p>A <a href="http://en.wikipedia.org/wiki/Gamebook">Choose Your Own Adventure</a> for the news. Enter an article URL below to start your quest.</p>
+				<p>A <a href="http://en.wikipedia.org/wiki/Gamebook">Choose Your Own Adventure</a> for the news.</p><!-- Primary Page LayoutEnter an article URL below to start your quest.</p>
 				<form action="#">
 					<input type="text" id="article_url" placeholder="Your adventure awaits..." />
 
 					<button class="shuffle" id="start" type="button"></button>
-				</form>
+				</form> -->
 			</div>
 		</div>
-	</div><!-- container -->
+	</div>
+	<!-- container -->
 	
 	<!-- BLOCK BEGINS HERE -->
 	<div id="template" class="container" style="display: none">
