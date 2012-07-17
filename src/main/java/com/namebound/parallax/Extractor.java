@@ -34,6 +34,11 @@ public class Extractor {
             image = a.topImage().getImageSrc();
         }
         
+        
+        text = text.replaceAll("\r\n", "\n");
+        text = text.replaceAll("\r", "\n");
+        text = text.replaceAll("\n", "<br />");
+        
         return this;
     }
 
