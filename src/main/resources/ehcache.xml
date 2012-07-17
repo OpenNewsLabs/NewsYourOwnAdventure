@@ -21,8 +21,8 @@
 
     <cache name="QuestionGeneration"
            maxElementsInMemory="1024"
-           eternal="false"
-           timeToLiveSeconds="43200"
+           eternal="true"
+           timeToLiveSeconds="4320000"
            overflowToDisk="true">
     </cache>
 </ehcache>

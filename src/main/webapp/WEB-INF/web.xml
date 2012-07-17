@@ -53,7 +53,7 @@ see implementation details http://jersey.java.net/nonav/documentation/latest/jax
         <url-pattern>*.svg</url-pattern>
 <!--        <url-pattern>/api/arkref/*</url-pattern>-->
 <!--        <url-pattern>/api/QuestionGeneration/*</url-pattern>-->
-        <url-pattern>/api/article/*</url-pattern>
+<!--        <url-pattern>/api/article/*</url-pattern>-->
     </filter-mapping>
     <listener>
         <description>ServletContextListener</description>
