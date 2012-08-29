@@ -144,7 +144,9 @@
 		-moz-opacity: 0.8;
 		-webkit-opacity: 0.8;
 		filter:alpha(opacity=80);			
-		-webkit-box-shadow: 0 4px 0px 4px #666;		
+		box-shadow: 0 4px 0px 4px #666;
+		-moz-box-shadow: 0 4px 0px 4px #666;
+		-webkit-box-shadow: 0 4px 0px 4px #666;
 	}
 	
 	.intro .shuffleHover {
@@ -156,7 +158,9 @@
 	
 	.intro .shuffleClick {		
 		bottom: 3px;
-		-webkit-box-shadow: 0 2px 0px 2px #666;			
+		box-shadow: 0 2px 0px 2px #666;
+		-moz-box-shadow: 0 2px 0px 2px #666;
+		-webkit-box-shadow: 0 2px 0px 2px #666;
 	}
 	
 	/* Chapter */
