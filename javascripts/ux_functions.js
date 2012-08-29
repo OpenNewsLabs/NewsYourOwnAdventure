@@ -45,9 +45,25 @@ $(document).ready(function() {
 	$(window).scroll(function() {
 		var scrollTop = $(window).scrollTop();
 		if (scrollTop >= 100) {
-			$('#minimast-inner').fadeIn('fast');
-		} else {
-			$('#minimast-inner').fadeOut('fast');
+			$('#minimast').fadeTo('fast',0.9);
 		}
 	});
+	
+	$('#minimast').mouseover(function() {
+		$(this).fadeTo('fast',0.9);
+	});
+	
+	$('button.shuffle').hover(function() {
+		$(this).addClass('shuffleHover');
+	}, function() {
+		$(this).removeClass('shuffleHover');
+	});
+	
+	$('button.shuffle').mousedown(function() {
+		$(this).addClass('shuffleClick');
+	});
+	
+	$(document).mouseup(function() {
+		$('button.shuffle').removeClass('shuffleClick');
+	});	
 });	
